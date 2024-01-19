@@ -1,17 +1,34 @@
+import React from "react";
 import Image from "next/image";
-import { User } from "./types";
+import Link from "next/link";
 
-import { fetchUsers } from "./requests";
+const imageStyles = {
+  borderWidth: 2,
+  borderColor: "white",
+};
 
-export default async function Home() {
-  const users: User[] = await fetchUsers();
-
+export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>AMEX TEST</h1>
-      {users?.map((user: User) => (
-        <p key={user.login.uuid}>{user.name.first}</p>
-      ))}
+    <main className="flex flex-col h-screen items-center justify-center bg-[#016FD0]">
+      <p className="mt-5 mb-1 text-4xl font-bold">Welcome to the</p>
+
+      <div className="mt-3">
+        <Image
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/American_Express_logo_%282018%29.svg/1200px-American_Express_logo_%282018%29.svg.png"
+          width={400}
+          height={400}
+          alt="Amex Logo"
+          layout="responsive"
+          style={imageStyles}
+        />
+      </div>
+
+      <div className="flex flex-col justify-center items-center border-3 border-yellow-400">
+        <p className="mt-5 text-4xl font-bold">Coding Challenge</p>
+        <p className="mt-1 text-2xl font-light">
+          <Link href="/users">View User List</Link>
+        </p>
+      </div>
     </main>
   );
 }
