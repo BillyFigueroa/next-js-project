@@ -10,14 +10,7 @@ export default async function UserList({ users }: UserListProps) {
     <div className="flex flex-col bg-gray-50 border-y border-slate-100 py-3 rounded-b-md">
       {users?.map((user: User, index: number) => (
         <React.Fragment key={user.login.uuid}>
-          <UserCard
-            age={user.dob.age}
-            city={user.location.city}
-            id={user.login.uuid}
-            imgUrl={user.picture.large}
-            name={`${user.name.first} ${user.name.last}`}
-            displayBorder={index !== 0}
-          />
+          <UserCard user={user} displayBorder={index !== 0} />
         </React.Fragment>
       ))}
     </div>

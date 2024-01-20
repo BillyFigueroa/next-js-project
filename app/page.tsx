@@ -5,6 +5,8 @@ import Link from "next/link";
 const imageStyles = {
   borderWidth: 2,
   borderColor: "white",
+  width: "100%",
+  height: "auto",
 };
 
 export default function Home() {
@@ -18,7 +20,7 @@ export default function Home() {
           width={400}
           height={400}
           alt="Amex Logo"
-          layout="responsive"
+          sizes="100vw"
           style={imageStyles}
         />
       </div>
