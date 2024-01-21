@@ -42,27 +42,27 @@ export default async function UserProfile({
         <div className="flex flex-col text-lg">
           <h1 className="text-5xl mb-3">{name}</h1>
 
-          <p className="flex items-center ml-1 text-gray-400 mb-0.5">
+          <p className="flex items-center ml-1 text-gray-500 mb-0.5">
             <IoMailOpenOutline size={20} className="mr-3 text-[#016FD0]" />
             {email}
           </p>
 
-          <p className="flex items-center text-gray-400 ml-1">
+          <p className="flex items-center text-gray-500 ml-1">
             <IoTimeOutline size={20} className="mr-3 text-[#016FD0]" />
             Born {displayDob()} &mdash; (age: {age})
           </p>
 
-          <p className="flex items-center ml-1 text-gray-400 mb-0.5">
+          <p className="flex items-center ml-1 text-gray-500 mb-0.5">
             <IoMegaphoneOutline size={20} className="mr-3 text-[#016FD0]" />
             {phone}
           </p>
 
-          <p className="flex items-center ml-1 text-gray-400 mb-0.5">
+          <p className="flex items-center ml-1 text-gray-500 mb-0.5">
             <IoLocationOutline size={20} className="mr-3 text-[#016FD0]" />
             {street}
           </p>
 
-          <p className="flex items-center text-gray-400 mb-0.5 ml-10">{locale}</p>
+          <p className="flex items-center text-gray-500 mb-0.5 ml-10">{locale}</p>
         </div>
       </div>
     </div>
