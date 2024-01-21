@@ -24,12 +24,12 @@ export default async function UserProfile({
   phone,
   dob,
 }: UserProfileProps) {
-  const [street, locale] = address.split("-");
+  const addressParts = address?.split("-");
 
   const displayDob = () => {
-    const dobParts = dob.split("-");
+    const dobParts = dob?.split("-");
 
-    return `${dobParts[1]}/${dobParts[2]}/${dobParts[0]}`;
+    return `${dobParts?.[1]}/${dobParts?.[2]}/${dobParts?.[0]}`;
   };
 
   return (
@@ -59,10 +59,10 @@ export default async function UserProfile({
 
           <p className="flex items-center ml-1 text-gray-500 mb-0.5">
             <IoLocationOutline size={20} className="mr-3 text-[#016FD0]" />
-            {street}
+            {addressParts?.[0]}
           </p>
 
-          <p className="flex items-center text-gray-500 mb-0.5 ml-10">{locale}</p>
+          <p className="flex items-center text-gray-500 mb-0.5 ml-10">{addressParts?.[1]}</p>
         </div>
       </div>
     </div>
