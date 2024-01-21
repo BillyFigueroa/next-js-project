@@ -47,7 +47,7 @@ export default function UserCard({
       }}
     >
       <div className="ml-5">
-        <div className={`flex gap-6 py-1.5 ${displayBorder ? "border-t border-gray-200" : ""}`}>
+        <div data-testid="UserCard--border" className={`flex gap-6 py-1.5 ${displayBorder ? "border-t border-gray-200" : ""}`}>
           <Image width={64} height={64} src={picture.large} alt="Profile image" style={imageStyles} />
 
           <div className="w-fit">

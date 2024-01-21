@@ -1,10 +1,11 @@
 import React from "react";
 import { PiUserListThin } from "react-icons/pi";
 
+// Local imports
 import { User } from "@/app/types";
+import UserList from "@/components/UserList";
 
 import { fetchUsers } from "./requests";
-import UserList from "@/components/UserList";
 
 export default async function UsersPage() {
   const users: User[] = await fetchUsers();

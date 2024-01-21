@@ -9,7 +9,7 @@ const imageStyles = {
   height: "auto",
 };
 
-export default function Home() {
+export default function HomePage() {
   return (
     <main className="flex flex-col h-screen items-center justify-center bg-[#016FD0]">
       <p className="mt-5 mb-1 text-4xl font-bold">Welcome to the</p>
