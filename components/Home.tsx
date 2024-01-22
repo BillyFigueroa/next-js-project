@@ -13,7 +13,7 @@ export default function Home() {
       <main className="flex flex-col h-screen items-center justify-center bg-[#016FD0]">
         <p className="mt-5 mb-1 text-4xl font-bold">Welcome to the</p>
 
-        <div className="mt-3">
+        <div className="mt-3 w-96 lg:w-[500px] ">
           <Image
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/American_Express_logo_%282018%29.svg/1200px-American_Express_logo_%282018%29.svg.png"
             width={400}

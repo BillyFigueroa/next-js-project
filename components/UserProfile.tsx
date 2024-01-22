@@ -33,14 +33,21 @@ export default async function UserProfile({
   };
 
   return (
-    <div className="flex flex-col bg-gray-100 border-y border-slate-100 py-3 rounded-b-md min-h-screen text-black">
-      <div className="flex bg-white mt-6 mx-auto w-8/12 rounded-md shadow-[0_8px_30px_rgb(0,0,0,0.12)] py-8 px-6">
-        <div className="flex items-center mr-10">
-          <Image src={imgUrl} height={200} width={200} alt="Profile Image" style={imageStyles} />
+    <div className="bg-gray-100 border-y border-slate-100 py-3 rounded-b-md min-h-screen text-black">
+      <div className="flex flex-col md:flex-row md:items-start bg-white mt-6 mx-auto w-10/12 max-w-[1200px] rounded-md shadow-[0_8px_30px_rgb(0,0,0,0.12)] py-8 px-6">
+        <div className="flex h-full justify-center mb-6 md:mx-5 lg:mx-10">
+          <Image
+            className="w-[200px] h-[200px]"
+            src={imgUrl}
+            height={200}
+            width={200}
+            alt="Profile Image"
+            style={imageStyles}
+          />
         </div>
 
-        <div className="flex flex-col text-lg">
-          <h1 className="text-5xl mb-3">{name}</h1>
+        <div className="flex flex-col items-center text-md sm:text-xl md:items-start">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl mb-3 text-center">{name}</h1>
 
           <p className="flex items-center ml-1 text-gray-500 mb-0.5">
             <IoMailOpenOutline size={20} className="mr-3 text-[#016FD0]" />
@@ -62,7 +69,7 @@ export default async function UserProfile({
             {addressParts?.[0]}
           </p>
 
-          <p className="flex items-center text-gray-500 mb-0.5 ml-10">{addressParts?.[1]}</p>
+          <p className="text-gray-500 mb-0.5 ml-10 text-center">{addressParts?.[1]}</p>
         </div>
       </div>
     </div>
