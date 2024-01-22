@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: ChildrenProps) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-gray-200">
       <body className={`${inter.className} text-white`}>
         <Navigation />
         {children}

@@ -11,7 +11,7 @@ export default async function UsersPage() {
   const users: User[] = await fetchUsers();
 
   return (
-    <main className="flex flex-col mx-auto bg-gray-200 text-black pt-4">
+    <main className="flex flex-col mx-auto text-black pt-4">
       <div className="flex flex-col mx-auto w-10/12 lg:w-8/12 bg-white rounded-md pt-4 mb-10 shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
         <div className="flex flex-col items-center justify-center mb-5">
           <PiUserListThin size={64} className="text-[#016FD0]" />
