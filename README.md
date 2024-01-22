@@ -20,7 +20,7 @@ npm run build
 yarn build
 ```
 
-## Building project
+## Starting project (Prod build)
 
 To view the production optmized app, run the following command
 
