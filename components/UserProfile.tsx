@@ -6,7 +6,7 @@ import {
   IoLocationOutline,
 } from "react-icons/io5";
 
-import { UserProfileProps } from "@/app/users/user/page";
+import { UserProfileProps } from "@/app/users/[uid]/page";
 
 const imageStyles = {
   borderColor: "#ededed",
